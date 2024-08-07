@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body{
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* MENU */
+
+nav{
+    background-color: #000;
+    height: 71px;
+    width: 100%;
+    z-index: 10;
+}
+
+.enlace{
+    position: absolute;
+    padding: 5px;
+    margin-left: 50px;
+}
+
+.logo{
+    height: 60px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 10px;
+}
+li a:hover{
+    background: #f6f6f6;
+    color: #000;
+    transition: 0.4s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* FILTRO */
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../img/titulos.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 40px 20px;
+    min-height: 15vh;
+    position: relative;
+}
+.titulo-texto {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.titulo img{
+    height: 3em;
+}
+
+.container{
+    font-size: 17px;
+}
+
+
+#filters {
+    float: left;
+    margin-top: 85px;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+
+.marca legend,
+.year legend,
+.transmision legend,
+.combustible legend,
+.rango legend {
+    font-size: 1rem;
+}
+
+.transmision label,
+.combustible label,
+.rango label {
+    font-size: 1rem; 
+}
+.marca select,
+.year select {
+    font-size: 1rem; 
+}
+
+
+
+
+.price-input {
+    float: left;
+}
+.input-text {
+    width: 50px;
+}
+.single-goods{
+    margin: 10px;
+    float: left;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.single-goods img {
+    width: 100%;
+}
+
+#sortPrice{
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.mr-2{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.pie-pagina{
+    width: 100%;
+    background-color: #000;
+    margin-top: auto;
+}
+.pie-pagina .grupo-1 .box{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    grid-gap: 30px;
+    padding: 20px 0px;
+    justify-content: center;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    color: #f6f6f6;
+    padding: 10px;
+    font-size: 25px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    transform: translateY(-10px);
+}
+.pie-pagina .grupo-1 .botones a{
+    color: #f6f6f6;
+    font-size: 15px;
+    display: flex;
+    text-decoration: none;
+    margin: 0px 10px;
+    align-items: center;
+}
+
+.pie-pagina .grupo-2{
+    padding: 20px;
+    text-align: center;
+    color: #f6f6f6;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .titulo-texto {
+        font-size: 3em;
+    }
+    .titulo img{
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .enlace{
+        padding-left: 0;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2a2a2a;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .2s;
+        z-index: 20;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover{
+        background: #f6f6f6;
+        color: #000;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    .single-goods img {
+        width: 100%;
+    }
+    .pie-pagina .grupo-1 .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titulo-texto {
+        font-size: 2.5em;
+    }
+    .titulo img{
+        height: 2em;
+    }
+    #filters {
+        margin-top: 15px;
+    }
+}

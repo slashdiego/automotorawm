@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automotora WM | Autos</title>
+    <link rel="stylesheet" href="css/autos.css">
+    <link rel="icon" href="./img/iconowm.ico">
+    <script src="https://kit.fontawesome.com/4901633de9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d"
+            },
+            fontFamily: {
+              sans: ['sans-serif']
+            }
+          },
+          container: {
+            center: true,
+            padding: "1.5rem"
+          }
+        }
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-sans;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html" class="enlace">
+            <img src="./img/logo wm.jpg" alt="logo de la empresa" class="logo" draggable="false">
+        </a>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="autos.html">Ver Autos</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+<!---------------MENU------------------>
+    
+    <div class="titulo">
+      <h1 class="titulo-texto">Nuestros modelos</h1>
+    </div>
+
+    <div class="container py-4">
+      <div class="grid grid-cols-1 md:grid-cols-12">
+        <div
+          id="filters"
+          class="mb-3 bg-white col-span-3 p-6 relative bg-gray-200 shadow-inner block">
+          <div class="marca">
+            <legend class="text-base font-bold text-gray-900 my-3">Marca</legend>
+            <select
+              id="marca"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option value="">Seleccione</option>
+              <option value="chevrolet">Chevrolet</option>
+              <option value="honda">Honda</option>
+              <option value="hyundai">Hyundai</option>
+              <option value="kia">Kia</option>
+              <option value="mazda">Mazda</option>
+              <option value="mitsubishi">Mitsubishi</option>
+              <option value="nissan">Nissan</option>
+              <option value="ssangyong">Ssangyong</option>
+              <option value="suzuki">Suzuki</option>
+              <option value="Toyota">Toyota</option>
+            </select>
+          </div>
+          <div class="year">
+            <legend class="text-base font-bold text-gray-900 my-3">Año</legend>
+            <select
+              id="year"
+              class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option value="">Seleccione</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2017">2018</option>
+              <option value="2019">2019</option>
+              <option value="2019">2020</option>
+            </select>
+          </div>
+
+          <div class="transmision">
+            <legend class="text-base font-bold text-gray-900 my-3">Transmisión</legend>
+            <div id="transmision">
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="Automática"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                <label class="font-medium text-gray-700">Automática</label>
+                
+                </div>
+              </div>
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="Mecánica"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                  <label class="font-medium text-gray-700">Mecánica</label>
+              
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="combustible">
+            <legend class="text-base font-bold text-gray-900 my-3">Combustible</legend>
+            <div id="combustible">
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="Diesel"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                <label class="font-medium text-gray-700">Diesel</label>
+                
+                </div>
+              </div>
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="Bencina"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                  <label class="font-medium text-gray-700">Bencina</label>
+              
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rango">
+            <legend class="text-base font-bold text-gray-900 my-3">Precio</legend>
+            <div id="rango">
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="0-3"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                <label class="font-medium text-gray-700">$0 - $3.000.000</label>
+                </div>
+              </div>
+
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="3-6"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                  <label class="font-medium text-gray-700">$3.000.000 - $6.000.000</label>
+                  </div>
+              </div>
+              
+              <div class="flex items-start mb-3">
+                  <div class="flex items-center h-5">
+                      <input
+                      type="checkbox"
+                      class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                      value="6-9"
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                  <label class="font-medium text-gray-700">$6.000.000 - $9.000.000</label>
+                  </div>
+              </div>
+
+              <div class="flex items-start mb-3">
+                <div class="flex items-center h-5">
+                    <input
+                    type="checkbox"
+                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                    value="9-12"
+                  />
+                </div>
+                <div class="ml-3 text-sm">
+                <label class="font-medium text-gray-700">$9.000.000 - $12.000.000</label>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="col-span-9 px-3 relative">
+        <div class="flex justify-end mb-4">
+          <label for="sortPrice" class="mr-2">Ordenar por:</label>
+          <select id="sortPrice" class="py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm">
+            <option value="default">Recientes</option>
+            <option value="asc">Precio menor</option>
+            <option value="desc">Precio mayor</option>
+          </select>
+        </div>
+          <div
+            id="goods"
+            class="col-span-9 px-3 relative grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/filter.js"></script>
+
+<!-------------FOOTER------------------>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <div class="red-social">
+                    <a href="https://web.facebook.com/automotorawm/?_rdc=1&_rdr" class="fa fa-facebook-f" target="_blank"></a>
+                    <a href="https://www.instagram.com/automotora_wm/" class="fa fa-instagram" target="_blank"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="botones">
+                    <a href="index.html">Inicio</a>
+                </div>
+                <div class="botones">
+                    <a href="autos.html">Autos</a>
+                </div>
+                <div class="botones">
+                    <a href="faq.html">Preguntas Frecuentes</a>
+                </div>
+                <div class="botones">
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>AutomotoraWM</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+  </body>
+</html>
